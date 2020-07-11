@@ -35,3 +35,15 @@ then
 else
         echo "Invalid e-mail id!"
 fi
+
+echo "Enter your country code followed by a space and the ten digit mobile number:"
+read mobNo
+
+mobnoPattern='^[0-9]{1,3}([-]{0,1}[0-9]{3,4})?[ ][0-9]{10}$'
+
+if [[ $mobNo =~ $mobnoPattern ]]
+then
+        echo "Valid number!"
+else
+        echo "Invalid number!"
+fi
