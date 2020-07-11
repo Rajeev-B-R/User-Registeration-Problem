@@ -47,3 +47,15 @@ then
 else
         echo "Invalid number!"
 fi
+
+echo "Enter the password with minimum 8 characters:"
+read pswd
+
+pswdPattern='^[a-zA-Z]{8,}$'
+
+if [[ $pswd =~ $pswdPattern ]]
+then
+        echo "Valid password!"
+else
+        echo "Invalid password!"
+fi
