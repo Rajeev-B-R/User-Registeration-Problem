@@ -23,3 +23,15 @@ then
 else
         echo "Invalid last name!"
 fi
+
+echo "Enter your e-mail id:"
+read email
+
+emailPattern='^[0-9a-zA-Z]{1,7}([._+-][0-9a-zA-Z]{1,7})*@[0-9a-zA-Z]+[.]+([a-zA-Z]{2,4})+[.]*([a-zA-Z]{2,3})*$'
+
+if [[ $email =~ $emailPattern ]]
+then
+        echo "Valid e-mail id!"
+else
+        echo "Invalid e-mail id!"
+fi
