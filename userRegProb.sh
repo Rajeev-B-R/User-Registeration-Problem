@@ -48,10 +48,10 @@ else
         echo "Invalid number!"
 fi
 
-echo "Enter the password with minimum 8 characters and one upper case:"
+echo "Enter the password with minimum 8 characters, one upper case and a number:"
 read pswd
 
-if [[ ${#pswd} -gt 7 && "$pswd" == *[[:upper:]]* ]]
+if [[ ${#pswd} -gt 7 && "$pswd" == *[[:upper:]]* && "$pswd" == *[[:digit:]]* ]]
 then
         echo "Valid password!"
 else
