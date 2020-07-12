@@ -27,7 +27,7 @@ fi
 echo "Enter your e-mail id:"
 read email
 
-emailPattern='^[0-9a-zA-Z]{1,7}([._+-][0-9a-zA-Z]{1,7})*@[0-9a-zA-Z]+[.]+([a-zA-Z]{2,4})+[.]*([a-zA-Z]{2,3})*$'
+emailPattern='^[a-zA-Z]+(([.+-_]{1})?[0-9]+([.+-_]{1})*)*([.]{1}[_+-]{1})*@[a-zA-Z0-9-]+\.[a-z]{2,}((\.([a-z])*){1})?$'
 
 if [[ $email =~ $emailPattern ]]
 then
